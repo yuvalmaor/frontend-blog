@@ -1,0 +1,16 @@
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+  backend:
+    image: pythonbackend
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge
