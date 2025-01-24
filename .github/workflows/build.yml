@@ -30,11 +30,11 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t your-dockerhub-username/blogfrontend:${{ env.VERSION }} .
+          docker build -t ym5533/blogfrontend:${{ env.VERSION }} .
 
       - name: Push Docker image to DockerHub
         run: |
-          docker push your-dockerhub-username/blogfrontend:${{ env.VERSION }}
+          docker push ym5533/blogfrontend:${{ env.VERSION }}
       - name: list images
         run: |
           docker images
