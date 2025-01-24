@@ -56,3 +56,5 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - name: Build Docker images
+        run: docker build -t frontend-blog .
