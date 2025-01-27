@@ -34,10 +34,8 @@ jobs:
       - name: Increment the patch version
         id: increment-version
         run: |
-          VERSION_PARTS=(${{ env.LATEST_VERSION//./ }})
-          MAJOR=${VERSION_PARTS[0]}
-          MINOR=${VERSION_PARTS[1]}
-          PATCH=${VERSION_PARTS[2]}
+          LATEST_VERSION=${{ env.LATEST_VERSION }}
+          IFS='.' read -r MAJOR MINOR PATCH <<< "$LATEST_VERSION"
           NEW_PATCH=$((PATCH + 1))
           NEW_VERSION="$MAJOR.$MINOR.$NEW_PATCH"
           echo "NEW_VERSION=$NEW_VERSION" >> $GITHUB_ENV
