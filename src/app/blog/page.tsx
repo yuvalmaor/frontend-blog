@@ -19,7 +19,7 @@ export default function Blog() {
   useEffect(() => {
     async function fetchPosts() {
       try {
-        const response = await axios.get("http://localhost/api/posts", {
+        const response = await axios.get("https://blog.yuvallab.xyz/api/posts", {
           headers: {
             "Access-Control-Allow-Origin": "*",
           },
