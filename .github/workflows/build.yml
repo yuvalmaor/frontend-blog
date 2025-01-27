@@ -81,7 +81,7 @@ jobs:
           ls -R
       - name: Update frontend version in values.yaml
         run: |
-          sed -i 's/frontendtag: "<old version>"/frontendtag: "${{ env.NEW_VERSION }}"/' ./target-repo/blogchart/values.yaml
+          sed -i 's/frontendtag: ".*"/frontendtag: "${{ env.NEW_VERSION }}"/' ./target-repo/blogchart/values.yaml
 
       - name: Commit and push changes to target repository
         env:
