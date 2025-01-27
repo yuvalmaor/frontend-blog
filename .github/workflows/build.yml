@@ -60,7 +60,7 @@ jobs:
         run: |
           docker build -t ym5533/blogfrontend:${{ env.NEW_VERSION }} .
 
-      - name: Push Docker image to DockerHub
+      - name: Push Docker image to DockerHub 
         run: |
           docker push ym5533/blogfrontend:${{ env.NEW_VERSION }}
 
