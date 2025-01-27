@@ -89,7 +89,7 @@ jobs:
         run: |
           cd target-repo
           ls -la 
-
+          cat ./blogchart/values.yaml
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/yuvalmaor/helmfile-blog.git
