@@ -26,7 +26,7 @@ export default function AddPage() {
           onChange={handleChange}
           placeholder="Enter something"
         />
-        <button type="submit">Submit</button>
+        <button type="submit">Submit-two</button>
       </form>
     </div>
   );
